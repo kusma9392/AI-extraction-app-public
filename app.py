@@ -5,7 +5,12 @@ import matplotlib.pyplot as plt
 # Load dataset
 import os
 import pandas as pd
-data=pd.read_csv("data.csv")
+import os
+
+if os.path.exists("data.csv"):
+    data = pd.read_csv("data.csv")
+else:
+    st.error("❌ data.csv file not found")
 
 X = data[['Solvent', 'Time', 'Temp']]
 y = data['Yield']
