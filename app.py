@@ -3,7 +3,11 @@ import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 import matplotlib.pyplot as plt
 # Load dataset
-data = pd.read_csv("data.csv")
+import os
+import pandas as pd
+
+file_path = os.path.join(os.getcwd(), "data.csv")
+data = pd.read_csv(file_path)
 
 X = data[['Solvent', 'Time', 'Temp']]
 y = data['Yield']
