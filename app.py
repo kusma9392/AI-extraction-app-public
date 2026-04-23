@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 # Load dataset
 import os
 import pandas as pd
-
-file_path = os.path.join(os.getcwd(), "data.csv")
-data = pd.read_csv(file_path)
+data=pd.read_csv("data.csv")
 
 X = data[['Solvent', 'Time', 'Temp']]
 y = data['Yield']
